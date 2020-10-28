@@ -11,10 +11,12 @@ class Player():
         global done
         screen.blit(self.image, (self.x, self.y))
 
-        if abs(self.y - car.y) < 150 and abs(self.x - car.x) < 200:
+        if abs(self.y - car.y) < 150 and abs(self.x - car.x) < 160:
+            print('Вы проиграли!!!')
             done = True
 
         if self.y <= - 200:
+            print('Вы выиграли!!!')
             done = True
 
 class Car():
